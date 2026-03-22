@@ -1,2 +1,0 @@
-set(__QT_DEPLOY_TARGET_RobotMotionVisualizer_FILE /home/mse/Documents/Robot Motions/build/Desktop_Qt_6_9_0-Debug/RobotMotionVisualizer)
-set(__QT_DEPLOY_TARGET_RobotMotionVisualizer_TYPE EXECUTABLE)

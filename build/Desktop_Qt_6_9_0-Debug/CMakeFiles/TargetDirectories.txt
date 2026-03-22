@@ -1,5 +1,0 @@
-/home/mse/Documents/Robot Motions/build/Desktop_Qt_6_9_0-Debug/CMakeFiles/RobotMotionVisualizer.dir
-/home/mse/Documents/Robot Motions/build/Desktop_Qt_6_9_0-Debug/CMakeFiles/edit_cache.dir
-/home/mse/Documents/Robot Motions/build/Desktop_Qt_6_9_0-Debug/CMakeFiles/rebuild_cache.dir
-/home/mse/Documents/Robot Motions/build/Desktop_Qt_6_9_0-Debug/CMakeFiles/RobotMotionVisualizer_autogen_timestamp_deps.dir
-/home/mse/Documents/Robot Motions/build/Desktop_Qt_6_9_0-Debug/CMakeFiles/RobotMotionVisualizer_autogen.dir
