@@ -1,0 +1,52 @@
+# ninja log v5
+0	612	1773324482148167322	RobotMotionVisualizer_autogen/timestamp	3bc2c52283478e1b
+0	612	1773324482148167322	RobotMotionVisualizer_autogen/mocs_compilation.cpp	3bc2c52283478e1b
+0	612	1773324482148167322	/home/mse/Documents/Robot Motions/build/Desktop_Qt_6_9_0-Debug/RobotMotionVisualizer_autogen/timestamp	3bc2c52283478e1b
+0	612	1773324482148167322	/home/mse/Documents/Robot Motions/build/Desktop_Qt_6_9_0-Debug/RobotMotionVisualizer_autogen/mocs_compilation.cpp	3bc2c52283478e1b
+614	914	1773324482452157227	CMakeFiles/RobotMotionVisualizer.dir/core/transformations.cpp.o	34cbda7949a2a54d
+614	2591	1773324484123101811	CMakeFiles/RobotMotionVisualizer.dir/main.cpp.o	cbe53f4507411d0c
+614	3121	1773324484654084239	CMakeFiles/RobotMotionVisualizer.dir/gui/mainwindow.cpp.o	5646b4f34717f872
+614	3122	1773324484654084239	CMakeFiles/RobotMotionVisualizer.dir/gui/viewport3d.cpp.o	90fac7fddbcdd2
+614	3131	1773324484666083842	CMakeFiles/RobotMotionVisualizer.dir/RobotMotionVisualizer_autogen/mocs_compilation.cpp.o	514a6fb0119fcebc
+614	3312	1773324484844077952	CMakeFiles/RobotMotionVisualizer.dir/gui/controlpanel.cpp.o	348724938cd56b1c
+3312	3719	1773324485256064333	RobotMotionVisualizer	24ff7be2fa09807b
+1	607	1773325337579730411	RobotMotionVisualizer_autogen/timestamp	3bc2c52283478e1b
+1	607	1773325337579730411	RobotMotionVisualizer_autogen/mocs_compilation.cpp	3bc2c52283478e1b
+1	607	1773325337579730411	/home/mse/Documents/Robot Motions/build/Desktop_Qt_6_9_0-Debug/RobotMotionVisualizer_autogen/timestamp	3bc2c52283478e1b
+1	607	1773325337579730411	/home/mse/Documents/Robot Motions/build/Desktop_Qt_6_9_0-Debug/RobotMotionVisualizer_autogen/mocs_compilation.cpp	3bc2c52283478e1b
+609	3349	1773325340319705096	CMakeFiles/RobotMotionVisualizer.dir/main.cpp.o	cbe53f4507411d0c
+609	3811	1773325340783700817	CMakeFiles/RobotMotionVisualizer.dir/gui/mainwindow.cpp.o	5646b4f34717f872
+607	3830	1773325340801700651	CMakeFiles/RobotMotionVisualizer.dir/RobotMotionVisualizer_autogen/mocs_compilation.cpp.o	514a6fb0119fcebc
+609	3865	1773325340835700337	CMakeFiles/RobotMotionVisualizer.dir/gui/viewport3d.cpp.o	90fac7fddbcdd2
+610	4137	1773325341106697839	CMakeFiles/RobotMotionVisualizer.dir/gui/controlpanel.cpp.o	348724938cd56b1c
+4137	4543	1773325341519694035	RobotMotionVisualizer	24ff7be2fa09807b
+2	32	1773325743870668683	RobotMotionVisualizer_autogen/timestamp	3bc2c52283478e1b
+2	32	1773325743870668683	RobotMotionVisualizer_autogen/mocs_compilation.cpp	3bc2c52283478e1b
+2	32	1773325743870668683	/home/mse/Documents/Robot Motions/build/Desktop_Qt_6_9_0-Debug/RobotMotionVisualizer_autogen/timestamp	3bc2c52283478e1b
+2	32	1773325743870668683	/home/mse/Documents/Robot Motions/build/Desktop_Qt_6_9_0-Debug/RobotMotionVisualizer_autogen/mocs_compilation.cpp	3bc2c52283478e1b
+34	2436	1773325754042605710	CMakeFiles/RobotMotionVisualizer.dir/gui/controlpanel.cpp.o	348724938cd56b1c
+2436	2871	1773325754483602991	RobotMotionVisualizer	24ff7be2fa09807b
+1	16	1773325831433120425	RobotMotionVisualizer_autogen/timestamp	3bc2c52283478e1b
+1	16	1773325831433120425	RobotMotionVisualizer_autogen/mocs_compilation.cpp	3bc2c52283478e1b
+1	16	1773325831433120425	/home/mse/Documents/Robot Motions/build/Desktop_Qt_6_9_0-Debug/RobotMotionVisualizer_autogen/timestamp	3bc2c52283478e1b
+1	16	1773325831433120425	/home/mse/Documents/Robot Motions/build/Desktop_Qt_6_9_0-Debug/RobotMotionVisualizer_autogen/mocs_compilation.cpp	3bc2c52283478e1b
+17	2247	1773325851027043023	CMakeFiles/RobotMotionVisualizer.dir/gui/viewport3d.cpp.o	90fac7fddbcdd2
+2247	2623	1773325851410079923	RobotMotionVisualizer	24ff7be2fa09807b
+3	593	1773326302580256235	RobotMotionVisualizer_autogen/timestamp	3bc2c52283478e1b
+3	593	1773326302580256235	RobotMotionVisualizer_autogen/mocs_compilation.cpp	3bc2c52283478e1b
+3	593	1773326302580256235	/home/mse/Documents/Robot Motions/build/Desktop_Qt_6_9_0-Debug/RobotMotionVisualizer_autogen/timestamp	3bc2c52283478e1b
+3	593	1773326302580256235	/home/mse/Documents/Robot Motions/build/Desktop_Qt_6_9_0-Debug/RobotMotionVisualizer_autogen/mocs_compilation.cpp	3bc2c52283478e1b
+594	3577	1773326305558389599	CMakeFiles/RobotMotionVisualizer.dir/gui/mainwindow.cpp.o	5646b4f34717f872
+593	3696	1773326305682395140	CMakeFiles/RobotMotionVisualizer.dir/RobotMotionVisualizer_autogen/mocs_compilation.cpp.o	514a6fb0119fcebc
+594	3884	1773326305858403004	CMakeFiles/RobotMotionVisualizer.dir/gui/controlpanel.cpp.o	348724938cd56b1c
+3884	4262	1773326306250420502	RobotMotionVisualizer	24ff7be2fa09807b
+3	583	1773326935546858348	RobotMotionVisualizer_autogen/timestamp	3bc2c52283478e1b
+3	583	1773326935546858348	RobotMotionVisualizer_autogen/mocs_compilation.cpp	3bc2c52283478e1b
+3	583	1773326935546858348	/home/mse/Documents/Robot Motions/build/Desktop_Qt_6_9_0-Debug/RobotMotionVisualizer_autogen/timestamp	3bc2c52283478e1b
+3	583	1773326935546858348	/home/mse/Documents/Robot Motions/build/Desktop_Qt_6_9_0-Debug/RobotMotionVisualizer_autogen/mocs_compilation.cpp	3bc2c52283478e1b
+583	2478	1773326937435894357	CMakeFiles/RobotMotionVisualizer.dir/main.cpp.o	cbe53f4507411d0c
+583	2998	1773326937955904259	CMakeFiles/RobotMotionVisualizer.dir/gui/viewport3d.cpp.o	90fac7fddbcdd2
+583	3093	1773326938050906066	CMakeFiles/RobotMotionVisualizer.dir/gui/mainwindow.cpp.o	5646b4f34717f872
+583	3276	1773326938236909604	CMakeFiles/RobotMotionVisualizer.dir/RobotMotionVisualizer_autogen/mocs_compilation.cpp.o	514a6fb0119fcebc
+583	3477	1773326938434913371	CMakeFiles/RobotMotionVisualizer.dir/gui/controlpanel.cpp.o	348724938cd56b1c
+3477	3783	1773326938746919305	RobotMotionVisualizer	24ff7be2fa09807b

@@ -1,0 +1,4 @@
+/home/mse/Documents/Robot Motions/build/CMakeFiles/RobotMotionVisualizer.dir
+/home/mse/Documents/Robot Motions/build/CMakeFiles/edit_cache.dir
+/home/mse/Documents/Robot Motions/build/CMakeFiles/rebuild_cache.dir
+/home/mse/Documents/Robot Motions/build/CMakeFiles/RobotMotionVisualizer_autogen.dir
