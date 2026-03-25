@@ -51,9 +51,8 @@ void Viewport3D::clearInterp()
     update();
 }
 
-// ---------------------------------------------------------------------------
-// 3‑D → 2‑D projection (orthographic with look‑at camera)
-// ---------------------------------------------------------------------------
+// 3‑D to 2‑D projection (orthographic projection)
+
 QPointF Viewport3D::project(double x, double y, double z) const
 {
     const double az = m_azimuth * M_PI / 180.0;
@@ -90,9 +89,9 @@ QPointF Viewport3D::project(double x, double y, double z) const
     return {cx + vx * scale, cy - vy * scale};
 }
 
-// ---------------------------------------------------------------------------
-// Painting
-// ---------------------------------------------------------------------------
+
+// Viewport Painter
+
 void Viewport3D::paintEvent(QPaintEvent *)
 {
     QPainter p(this);
@@ -111,7 +110,7 @@ void Viewport3D::paintEvent(QPaintEvent *)
     // Grid on Z = 0
     drawGrid(p);
 
-    // Base coordinate frame (dashed, semi‑transparent)
+    // Base coordinate frame display in dashed and semi‑transparent
     const double I[3][3] = {{1, 0, 0}, {0, 1, 0}, {0, 0, 1}};
     drawFrame(p, 0, 0, 0, I, 1.5, 90, true, QString());
 
@@ -264,9 +263,8 @@ void Viewport3D::drawTrail(QPainter &p, double x, double y, double z)
     p.drawEllipse(to, 4, 4);
 }
 
-// ---------------------------------------------------------------------------
-// Mouse / wheel interaction (camera orbit + zoom)
-// ---------------------------------------------------------------------------
+// Mouse / wheel interaction (camera movement + zooming)
+
 void Viewport3D::mousePressEvent(QMouseEvent *event)
 {
     if (event->button() == Qt::LeftButton) {

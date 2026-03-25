@@ -14,7 +14,7 @@
 ControlPanel::ControlPanel(QWidget *parent)
     : QWidget(parent)
 {
-    // ---- Global dark stylesheet for the panel ----
+    // Dark stylesheet for the control panel
     setStyleSheet(R"(
         QWidget { background-color: #333333; color: white; }
         QGroupBox {
@@ -51,7 +51,7 @@ ControlPanel::ControlPanel(QWidget *parent)
     layout->setSpacing(4);
     layout->setContentsMargins(8, 8, 8, 8);
 
-    // ---- Title ----
+    // Title
     auto *title = new QLabel(QStringLiteral("Controls"));
     title->setStyleSheet("font: bold 14pt 'Segoe UI'; color: white;");
     title->setAlignment(Qt::AlignCenter);
@@ -63,7 +63,7 @@ ControlPanel::ControlPanel(QWidget *parent)
     sep->setStyleSheet("background: #00bcd4;");
     layout->addWidget(sep);
 
-    // ---- Rotation ----
+    // Rotation Handler
     auto *rotGroup = new QGroupBox(QStringLiteral("Rotation (Euler ZYX)"));
     auto *rotLayout = new QVBoxLayout(rotGroup);
     rotLayout->setSpacing(2);
@@ -72,7 +72,7 @@ ControlPanel::ControlPanel(QWidget *parent)
     rotLayout->addWidget(createSliderRow("Yaw   (Z)", "yaw",   -180, 180, 1.0, rotGroup));
     layout->addWidget(rotGroup);
 
-    // ---- Translation ----
+    // Translation Handler
     auto *transGroup = new QGroupBox(QStringLiteral("Translation"));
     auto *transLayout = new QVBoxLayout(transGroup);
     transLayout->setSpacing(2);
@@ -81,7 +81,7 @@ ControlPanel::ControlPanel(QWidget *parent)
     transLayout->addWidget(createSliderRow("Translate Z", "tz", -10.0, 10.0, 0.05, transGroup));
     layout->addWidget(transGroup);
 
-    // ---- Homogeneous matrix display ----
+    // Homogeneous matrix display panel
     auto *matGroup = new QGroupBox(QStringLiteral("Homogeneous Matrix (4\u00d74)"));
     auto *matLayout = new QVBoxLayout(matGroup);
     m_matrixText = new QTextEdit();
@@ -99,7 +99,7 @@ ControlPanel::ControlPanel(QWidget *parent)
     matLayout->addWidget(applyMatBtn);
     layout->addWidget(matGroup);
 
-    // ---- Quaternion display ----
+    // Quaternion display
     auto *quatGroup = new QGroupBox(QStringLiteral("Quaternion [w, x, y, z]"));
     auto *quatLayout = new QVBoxLayout(quatGroup);
     m_quatEdit = new QLineEdit(QStringLiteral("[1.0000, 0.0000, 0.0000, 0.0000]"));
@@ -117,7 +117,7 @@ ControlPanel::ControlPanel(QWidget *parent)
     quatLayout->addWidget(applyQuatBtn);
     layout->addWidget(quatGroup);
 
-    // ---- Buttons ----
+    // Buttons
     auto *btnLayout = new QHBoxLayout();
 
     auto *resetBtn = new QPushButton(QStringLiteral("Reset All"));
@@ -140,7 +140,7 @@ ControlPanel::ControlPanel(QWidget *parent)
 
     layout->addLayout(btnLayout);
 
-    // ---- Waypoint Interpolation section ----
+    // Waypoint Interpolation section
     auto *wpGroup = new QGroupBox(QStringLiteral("Waypoint Animation"));
     auto *wpLayout = new QVBoxLayout(wpGroup);
     wpLayout->setSpacing(4);
@@ -225,18 +225,17 @@ ControlPanel::ControlPanel(QWidget *parent)
     layout->addWidget(wpGroup);
     layout->addStretch();
 
-    // ---- Animation timer ----
+    // Animation timer
     m_animTimer = new QTimer(this);
     connect(m_animTimer, &QTimer::timeout, this, &ControlPanel::animateStep);
 
-    // ---- Waypoint interpolation timer ----
+    // Waypoint interpolation timer
     m_waypointTimer = new QTimer(this);
     connect(m_waypointTimer, &QTimer::timeout, this, &ControlPanel::waypointStep);
 
     updateDisplays();
 }
 
-// ---------------------------------------------------------------------------
 QWidget *ControlPanel::createSliderRow(const QString &label,
                                        const QString &key,
                                        double minVal, double maxVal,
@@ -270,7 +269,7 @@ QWidget *ControlPanel::createSliderRow(const QString &label,
 
     m_sliders[key] = {slider, spinBox, minVal, maxVal, step};
 
-    // Slider → SpinBox
+    // Slider to SpinBox
     connect(slider, &QSlider::valueChanged, this, [this, key](int val) {
         auto &sg = m_sliders[key];
         double dval = val * sg.step;
@@ -280,7 +279,7 @@ QWidget *ControlPanel::createSliderRow(const QString &label,
         onSliderChanged();
     });
 
-    // SpinBox → Slider
+    // SpinBox to Slider
     connect(spinBox, QOverload<double>::of(&QDoubleSpinBox::valueChanged),
             this, [this, key](double val) {
         auto &sg = m_sliders[key];
@@ -302,7 +301,7 @@ double ControlPanel::getValue(const QString &key) const
     return 0.0;
 }
 
-// ---------------------------------------------------------------------------
+// Control Pannel
 void ControlPanel::onSliderChanged()
 {
     updateDisplays();
@@ -347,7 +346,6 @@ void ControlPanel::updateDisplays()
     m_quatEdit->blockSignals(false);
 }
 
-// ---------------------------------------------------------------------------
 void ControlPanel::resetAll()
 {
     for (auto &[key, sg] : m_sliders) {
@@ -400,9 +398,7 @@ void ControlPanel::animateStep()
     ++m_animStep;
 }
 
-// ---------------------------------------------------------------------------
 // Waypoint animation
-// ---------------------------------------------------------------------------
 static QString poseString(double roll, double pitch, double yaw,
                           double tx, double ty, double tz)
 {
@@ -561,9 +557,7 @@ void ControlPanel::waypointStep()
     }
 }
 
-// ---------------------------------------------------------------------------
 // Set sliders programmatically without triggering recursive updates
-// ---------------------------------------------------------------------------
 void ControlPanel::setSlidersFromPose(double roll, double pitch, double yaw,
                                       double tx, double ty, double tz)
 {
@@ -582,9 +576,8 @@ void ControlPanel::setSlidersFromPose(double roll, double pitch, double yaw,
     }
 }
 
-// ---------------------------------------------------------------------------
-// Apply manually edited homogeneous matrix
-// ---------------------------------------------------------------------------
+// Apply manually the edited homogeneous matrix
+
 void ControlPanel::applyMatrix()
 {
     const QString text = m_matrixText->toPlainText();
@@ -612,9 +605,8 @@ void ControlPanel::applyMatrix()
     emit paramsChanged(roll, pitch, yaw, t[0], t[1], t[2]);
 }
 
-// ---------------------------------------------------------------------------
-// Apply manually edited quaternion
-// ---------------------------------------------------------------------------
+// Apply manually the edited quaternion
+
 void ControlPanel::applyQuaternion()
 {
     QString text = m_quatEdit->text().trimmed();

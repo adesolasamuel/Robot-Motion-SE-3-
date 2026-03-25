@@ -193,4 +193,4 @@ Mat4 interpolateTransforms(const Mat4 &T_start, const Mat4 &T_end, double alpha)
     return homogeneousMatrix(R, t);
 }
 
-} // namespace tf
+}

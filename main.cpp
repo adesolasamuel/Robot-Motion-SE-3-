@@ -7,7 +7,7 @@ int main(int argc, char *argv[])
 {
     QApplication app(argc, argv);
 
-    // Dark Fusion theme
+    // Dark theme
     app.setStyle(QStyleFactory::create("Fusion"));
 
     QPalette dark;
