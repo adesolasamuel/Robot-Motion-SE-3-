@@ -9,14 +9,14 @@ I actually added the simulation part because of the exercise in the course textb
 ## Features
 
 1. Interactive transform controls for:
-	 Rotation as Euler ZYX angles (roll, pitch, yaw)
-	 Translation along X, Y, Z
+	- Rotation as Euler ZYX angles (roll, pitch, yaw)
+	- Translation along X, Y, Z
 2. Transform representations in:
-     Angles via the slider
-	 4x4 homogeneous transformation matrix
-	 Quaternion [w, x, y, z]
+    - Angles via the slider
+	- 4x4 homogeneous transformation matrix
+	- Quaternion [w, x, y, z]
 3. Animation tools:
-	 Point movement simulation
+	- Point movement simulation
 
 ## How to Build And Run
 
